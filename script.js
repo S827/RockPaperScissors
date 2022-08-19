@@ -1,8 +1,8 @@
-function getComputerChoice(){
+function getComputerChoice(){  //to get the random number from 1 to 3 for computerChoice
     return Math.floor(Math.random()*3) + 1;
 }
 
-function computerChoice(){
+function computerChoice(){  //to assign the choice 1 for rock, 2 for paper, 3 for scissors
     let choice = getComputerChoice();
     if(choice === 1){
         return 'rock';
@@ -13,14 +13,14 @@ function computerChoice(){
     }
 }
 
-function getPlayerChoice(){
+function getPlayerChoice(){ // get the player choice and convert it to lowercase to ignore case-sensitive challenges
     let choice = prompt("Rock, Paper or Scissors?", '.....');
     return choice.toLowerCase();
 }
 
 
 
-function playGame(playerSelection, computerSelection){
+function playGame(playerSelection, computerSelection){  // To calcualte the winnings, loss and tie
         if (playerSelection === 'rock' && computerSelection === 'paper'){
 			return("Computer Wins");
 		} else if(playerSelection === 'rock' && computerSelection === 'scissors'){
@@ -42,7 +42,7 @@ function playGame(playerSelection, computerSelection){
 
 
 
-function game(){
+function game(){    // To loop the fame for n number of times and display the result after each winning, loss or tie and display the total stats when game ends
     let wins = 0, loss = 0, ties = 0, invalid = 0;
     for(let i = 0; i < 5; i++){
         computerSelection = computerChoice();
@@ -68,4 +68,4 @@ function game(){
     console.log(`ties = ${ties}`);
     console.log(`invalid = ${invalid}`);
 }
-game();
+game(); 
