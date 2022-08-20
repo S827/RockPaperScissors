@@ -42,7 +42,7 @@ function playGame(playerSelection, computerSelection){  // To calcualte the winn
 
 
 
-function game(){    // To loop the fame for n number of times and display the result after each winning, loss or tie and display the total stats when game ends
+function game(){    // To loop the game for n number of times and display the result after each winning, loss or tie and display the total stats when game ends
     let wins = 0, loss = 0, ties = 0, invalid = 0;
     for(let i = 0; i < 5; i++){
         computerSelection = computerChoice();
